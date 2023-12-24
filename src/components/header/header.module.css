@@ -1,0 +1,47 @@
+.container{
+    padding: 1.5rem;
+    display: flex;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex: 1;
+}
+.logo>img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.logg>span{
+    font-weight: 600;
+}
+.right{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+.menu>li:hover{
+   color: #fe956f;
+   cursor: pointer;
+}
+.search{
+    width: 7rem;
+    border: none;
+    outline: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    height: 60%;
+}
+.cart{
+     width: 1.5rem;
+     height: 1.5rem;
+     cursor: pointer;
+}
