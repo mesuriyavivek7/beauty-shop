@@ -5,11 +5,15 @@ import css from './hero.module.css'
 //import images
 import HeroImage from '../../assets/hero.png'
 
+//import animation from motion
+import { motion } from "framer-motion"
+
 //import icons
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 export default function Hero() {
+  const transition={duration:3,type:"spring",}
   return (
     <div className={css.container}>
 
@@ -21,15 +25,28 @@ export default function Hero() {
                 <span>Treandy Collection</span>
                 <span>
                 {" "}
-                here your are getting very best products with best quality and all products are in natural from</span>
+                here your are getting very best products with best quality and all products are in natural from
+                </span>
             </div>
         </div>
 
         <div className={css.wrapper}>
-           <div className={css.blue}></div>
-           <img src={HeroImage} width={600} alt=''></img>
+           <motion.div
+           initial={{bottom:"2rem"}}
+           whileInView={{bottom:"0rem"}} 
+           transition={transition}
+           className={css.blue}></motion.div>
+           <motion.img 
+           initial={{bottom:"-2rem"}}
+           whileInView={{bottom:"0rem"}}
+           transition={transition}
+           src={HeroImage} width={600} alt=''></motion.img>
 
-           <div className={css.cart2}>
+           <motion.div 
+           transition={transition}
+           initial={{right:"4%"}}
+           whileInView={{right:"1%"}}
+           className={css.cart2}>
              <LocalMallIcon></LocalMallIcon>
              <div className={css.signup}>
                 <span>Best Signup Offers</span>
@@ -37,7 +54,7 @@ export default function Hero() {
                     <ArrowRightAltIcon></ArrowRightAltIcon>
                 </div>
              </div>
-           </div>
+           </motion.div>
 
         </div>
 
